@@ -1,0 +1,45 @@
+body {
+  font-family: 'Crimson Text', serif;
+   font-size: 16px; 
+}
+
+.navbar-inverse {
+    background-color: #303580;
+    border-color: #E4A02E;
+}
+
+.navbar-inverse .navbar-brand {
+
+    color: #E4A02E;
+    font-size: 24px;
+}
+
+#titulo {
+   font-family: 'Crimson Text', serif;
+
+}
+
+.telefones {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.telefones ul {
+    width: 265px;
+    overflow: hidden;
+    margin: auto;
+    background: url(../images/icone_fone.png) left 10px no-repeat;
+   padding-top: 10px;
+   padding-left: 40px;
+}
+
+.telefones li {
+    display: inline-block;
+    font-size:12px;
+    float: right;
+    margin-left: 10px;
+    text-transform: uppercase;
+    border-right: #666 dotted 1px;
+    padding-right: 5px;
+}

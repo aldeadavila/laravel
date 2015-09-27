@@ -1,5 +1,5 @@
 <?php
-namespace Imobiliaria\Models;
+namespace App;
 use Illuminate\Database\Eloquent\Model;
 class imovel extends Model
 {

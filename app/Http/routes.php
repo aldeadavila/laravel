@@ -1,15 +1,4 @@
 <?php
-/*
-Imovels
-*/
-$config = [
-   'getIndex' => 'imovel.index',
-   'getCriar' => 'imovel.create',
-   'getEditar' => 'imovel.edit',
-   'getSalvar' => 'imovel.store',
-   'getAtualizar' => 'imovel.update',
-   'getRemover' => 'imovel.destroy',
-];
 
 //Route::controller('imovels', 'ImovelsController', $config);
 Route::resource('imovels', 'ImovelsController',
@@ -19,7 +8,8 @@ Route::resource('imovels', 'ImovelsController',
 
 Route::get('/', function()
 {
-    return View::make('pages.home');
+    $imoveis = \App\imovel::all();
+    return view('pages.home')->with(compact('imoveis'));
 });
 Route::get('/about', function()
 {

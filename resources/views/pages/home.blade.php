@@ -1,4 +1,16 @@
 @extends('layouts.default')
-@section('content')
-    i am the home page
+@section('head')
+   @include('includes.head')
+@stop
+@section('cabecera')
+    @include('includes.cabecera')
+@stop
+@section('navegacion')
+    @include('includes.navegacion')
+@stop
+@section('contenido')
+    @include('includes.contenido-home')
+@stop
+@section('footer')
+    @include('includes.footer')
 @stop
