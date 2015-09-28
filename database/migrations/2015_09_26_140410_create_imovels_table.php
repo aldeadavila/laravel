@@ -21,6 +21,7 @@ class CreateImovelsTable extends Migration
             $table->string('valor')->nullable();
             $table->string('area')->nullable();
             $table->string('descricao', 1000)->nullable();
+            $table->boolean('status');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

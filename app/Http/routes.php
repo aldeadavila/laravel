@@ -1,5 +1,7 @@
 <?php
 
+use \App\Imovel;
+
 //Route::controller('imovels', 'ImovelsController', $config);
 Route::resource('imovels', 'ImovelsController',
    ['names' => ['create' => 'imovels-criar']]);
@@ -8,8 +10,8 @@ Route::resource('imovels', 'ImovelsController',
 
 Route::get('/', function()
 {
-    $imoveis = \App\imovel::all();
-    return view('pages.home')->with(compact('imoveis'));
+    $imoveis = Imovel::where('cidade','Embu das Artes')->where('negocio', 'venda')->get();
+    return view('pages.home', ['title' => 'Imobiliaria J.Lima - Principal'])->with(compact('imoveis'));
 });
 Route::get('/about', function()
 {
@@ -23,3 +25,12 @@ Route::get('/contact', function()
 {
     return View::make('pages.contact');
 });
+
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');

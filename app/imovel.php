@@ -1,7 +1,7 @@
 <?php
 namespace App;
 use Illuminate\Database\Eloquent\Model;
-class imovel extends Model
+class Imovel extends Model
 {
    protected $table = 'imovels';
 

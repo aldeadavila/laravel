@@ -1,6 +1,8 @@
 <!-- Page Content -->
     <div class="container">
-        {{!! var_dump($imoveis[0]->toArray()) !!}}
+        {{!! $imoveis !!}}
+
+        @include('includes.ficha')
 
         <!-- Marketing Icons Section -->
         <div class="row">

@@ -25,6 +25,7 @@ class ImovelTableSeeder extends Seeder
                 'cidade' => $faker->randomElement($array = array ('Embu das Artes', 'Tabão da Serra')),
                 'valor' => $faker->numberBetween($min = 30000, $max = 500000),
                 'area' => $faker->numberBetween($min = 30, $max = 5000),
+                'status' =>$faker->randomElement($array = array ('1','0')),
                 'descricao' => $faker->paragraph($nbSentences = 8),
                 'user_id' => $faker->numberBetween($min = 1, $max = 10),
             ));
