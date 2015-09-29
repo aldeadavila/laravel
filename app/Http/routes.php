@@ -3,8 +3,8 @@
 use \App\Imovel;
 
 //Route::controller('imovels', 'ImovelsController', $config);
-Route::resource('imovels', 'ImovelsController',
-   ['names' => ['create' => 'imovels-criar']]);
+Route::resource('imovel', 'ImovelsController',
+   ['names' => ['store' => 'imovel-criar']]);
 
 //Route::get('/imovels', 'ImovelsController@index');
 

@@ -1,12 +1,12 @@
 @extends('layouts.default')
-@section('head')
-   @include('includes.head')
-@stop
 @section('cabecera')
     @include('includes.cabecera')
 @stop
 @section('navegacion')
     @include('includes.navegacion')
+@stop
+@section('carrusel')
+@include('includes.carrusel')
 @stop
 @section('contenido')
     @include('includes.contenido-home')

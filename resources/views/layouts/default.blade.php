@@ -1,12 +1,14 @@
 <!doctype html>
 <html>
 <head>
-    @yield('head')
+     @include('includes.head')
 </head>
 <body>
     @yield('cabecera')
     @yield('navegacion')
-    @include('includes.carrusel')
+
+    @yield('carrusel')
+    
     
     @yield('contenido')
 
