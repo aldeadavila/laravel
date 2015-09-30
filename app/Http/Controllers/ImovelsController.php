@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use \App\Imovel;
+use App\Imovel;
+use App\Foto;
 use DB;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -22,9 +23,12 @@ class ImovelsController extends Controller
      */
     public function index()
     {
-         $title = 'Criar Imoveis';
-         $imoveis = Imovel::paginate(4);
-        return view('imovel.index', ['imoveis' => $imoveis, 'title' => $title]);
+         $title = 'Mostrar Imoveis';
+
+        // $imoveis = Imovel::paginate(4);
+         $imoveis = Imovel::all();
+       // return view('imovel.index', ['imoveis' => $imoveis, 'title' => $title]);
+         return view('imovel.index')->with('imoveis', $imoveis)->with('title', $title);
     }
 
     /**
@@ -56,9 +60,11 @@ class ImovelsController extends Controller
      */
     public function show($id)
     {
-        $imovel = Imovel::where('id', $id);
-        dd($imovel)
-        return $imovel;
+        $imovel = Imovel::findOrFail($id);
+        $fotos = Foto::where('imovel_id', $id)->get();
+
+        //return $fotos;
+        return view('imovel.show', compact('imovel', 'fotos'));
     }
 
     /**
