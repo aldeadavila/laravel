@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Imovel;
 use App\Foto;
 use DB;
-use Illuminate\Http\Request;
+use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -14,6 +14,7 @@ class ImovelsController extends Controller
 
     public function __construct()
     {
+       //$this->request->$request;
        // $this->middleware('auth');
     }
     /**
@@ -38,7 +39,7 @@ class ImovelsController extends Controller
      */
     public function create()
     {
-        return 'crear nuevo imovel';
+        return view('imovel.create');
     }
 
     /**
@@ -47,13 +48,16 @@ class ImovelsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        return 'almacenar imovel';
+        $input = Request::all();
+        //Imovel::create($input);
+
+        return $input;
     }
 
     /**
-     * Display the specified resource.
+      * Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

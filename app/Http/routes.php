@@ -1,13 +1,16 @@
 <?php
 
-use \App\Imovel;
+use App\Imovel;
 
 //Route::controller('imovels', 'ImovelsController', $config);
 /*Route::resource('imovel', 'ImovelsController',
    ['names' => ['store' => 'imovel-criar']]);
 */
-Route::get('/imoveis', 'ImovelsController@index');
+Route::get('imoveis', 'ImovelsController@index');
+Route::get('imoveis/create', 'ImovelsController@create');
 Route::get('imoveis/{id}', 'ImovelsController@show');
+Route::post('imoveis', 'ImovelsController@store');
+
 
 Route::get('/', function()
 {
