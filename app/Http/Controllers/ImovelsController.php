@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Imovel;
 use App\Foto;
 use DB;
+use Carbon\Carbon;
 use Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -27,7 +28,7 @@ class ImovelsController extends Controller
          $title = 'Mostrar Imoveis';
 
         // $imoveis = Imovel::paginate(4);
-         $imoveis = Imovel::all();
+         $imoveis = Imovel::latest()->get(); 
        // return view('imovel.index', ['imoveis' => $imoveis, 'title' => $title]);
          return view('imovel.index')->with('imoveis', $imoveis)->with('title', $title);
     }
@@ -51,9 +52,12 @@ class ImovelsController extends Controller
     public function store()
     {
         $input = Request::all();
-        //Imovel::create($input);
+        $input['created_at'] = Carbon::now();
+        $input['update_at'] = Carbon::now();
+        $input['user_id'] = 1;
+        Imovel::create($input);
 
-        return $input;
+        return redirect('imoveis');
     }
 
     /**
