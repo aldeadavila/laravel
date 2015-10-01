@@ -104,6 +104,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+    'email' => 'E-mail',
+    'telefone' => 'Phone',
+    'password' => 'Password',
+    'login' => 'Login',
+    'remember' => 'Remember Password',
+    'forgotpassword' => 'I forgot the password.',
+    ],
 
 ];

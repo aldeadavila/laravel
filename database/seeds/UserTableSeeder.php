@@ -21,7 +21,7 @@ class UserTableSeeder extends Seeder
             'telefone' => $faker->cellphone,
             'email' => $faker->unique()->email,
             'password' => \Hash::make('123456'),
-            'type' => 'user',
+            'role' => 'user',
          ));
       }
     }

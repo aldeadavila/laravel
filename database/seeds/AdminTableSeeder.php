@@ -16,7 +16,7 @@ class AdminTableSeeder extends Seeder
          'telefone' => '4149-7102',
          'email' => 'vagner@imobiliariajlima.com',
          'password' => \Hash::make('deltoya1314'),
-         'type' => 'admin',
+         'role' => 'admin',
       ));
     }
 }
