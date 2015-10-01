@@ -13,6 +13,8 @@ use App\Http\Controllers\Controller;
 class ImovelsController extends Controller
 {
 
+    /*Recupera con elocuent las fotos de una inmueble App\Imovel::find(7)->fotos()->get()*/
+
     public function __construct()
     {
        //$this->request->$request;

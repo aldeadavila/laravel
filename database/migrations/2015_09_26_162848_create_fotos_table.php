@@ -17,6 +17,7 @@ class CreateFotosTable extends Migration
             $table->String('ruta');
             $table->String('nome')->nullable();
             $table->String('descricao')->nullable;
+            $table->boolean('principal');
             $table->integer('imovel_id')->unsigned();
             $table->foreign('imovel_id')->references('id')->on('imovels')->onDelete('cascade');
             $table->timestamps();
