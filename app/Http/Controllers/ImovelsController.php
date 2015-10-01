@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Imovel;
-use App\Foto;
+use App\imovel;
+use App\foto;
 use DB;
 use Carbon\Carbon;
 use Request;

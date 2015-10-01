@@ -1,6 +1,6 @@
 <?php
 
-use App\Imovel;
+use App\imovel;
 
 //Route::controller('imovels', 'ImovelsController', $config);
 /*Route::resource('imovel', 'ImovelsController',
