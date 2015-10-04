@@ -1,6 +1,7 @@
 <?php
 
 use App\imovel;
+use App\foto;
 
 //Route::controller('imovels', 'ImovelsController', $config);
 /*Route::resource('imovel', 'ImovelsController',
@@ -13,9 +14,11 @@ Route::post('imoveis', 'ImovelsController@store');
 
 
 Route::get('/home', function()
+
 {
-    $imoveis = Imovel::where('cidade','Embu das Artes')->where('negocio', 'venda')->get();
-    return view('pages.home', ['title' => 'Imobiliaria J.Lima - Principal'])->with(compact('imoveis'));
+    $imoveis = Imovel::all();
+    $fotos = Foto::where('imovel_id', '=', '1')->get();
+    return view('pages.home', ['title' => 'Imobiliaria J.Lima - Principal', 'imoveis' => $imoveis, 'fotos' => $fotos]);
 });
 Route::get('/about', function()
 {

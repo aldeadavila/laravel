@@ -42,6 +42,11 @@ header.carousel .fill {
     background-size: cover;
 }
 
+header.carousel .fill .description {
+    height: 220px;
+    border-left: 2px solid blue;
+}
+
 /* 404 Page Styles */
 
 .error-404 {

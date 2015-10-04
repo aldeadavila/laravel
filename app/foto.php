@@ -12,6 +12,6 @@ class Foto extends Model
 
     public function imovel()
     {
-        return $this->belongsTo('App\imovel');
+        return $this->belongsTo('imovel');
     }
 }

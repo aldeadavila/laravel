@@ -2,7 +2,7 @@
 <meta name="description" content="">
 <meta name="Franciso Jose Marquina Garcia" content="Imóvels">
 
-<title>{{ $title }}</title>
+<title></title>
 
 <!-- load bootstrap from a cdn -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">

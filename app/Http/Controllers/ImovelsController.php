@@ -30,9 +30,16 @@ class ImovelsController extends Controller
          $title = 'Mostrar Imoveis';
 
         // $imoveis = Imovel::paginate(4);
-         $imoveis = Imovel::latest()->get(); 
+         $imoveis = Imovel::all()->first()->get();
+         $cajas = "hola para ti mi cola";
+        // $fotaza = Foto::where('imovel_id', '=', '1')->first();
+        // $fotaza = Foto::first()->get();
        // return view('imovel.index', ['imoveis' => $imoveis, 'title' => $title]);
-         return view('imovel.index')->with('imoveis', $imoveis)->with('title', $title);
+        //return view('imovel.index',['imoveis' => $imoveis, 'title' => $title, 'fotos' => $fotos]);
+        return view('imovel.index')
+        ->with('cajas', $cajas)
+        ->with('imoveis' , $imoveis);
+        
     }
 
     /**

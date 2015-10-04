@@ -1,7 +1,7 @@
 <!-- Page Content -->
     <div class="container">
-        {{!! $imoveis !!}}
-
+        <!-- {{!! $imoveis !!}} -->
+        <hr>
         @include('includes.ficha')
 
         <!-- Marketing Icons Section -->
