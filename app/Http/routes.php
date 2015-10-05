@@ -16,9 +16,31 @@ Route::post('imoveis', 'ImovelsController@store');
 Route::get('/home', function()
 
 {
-    $imoveis = Imovel::all();
+		//numero de inmuebles totales App\Imovel::get()->count();
+	 // un inmueble aleatorio App\Imovel::all()->random();
+	  // 3 inmuebles aleatorios  $elegidos = App\Imovel::all()->random(3);
+
+
+    $imove = App\Imovel::all()->random(3);
+    
+    $keys = $imove->keys();
+    $imovel1 = App\Imovel::find($keys[0]);
+    $imovel2 = App\Imovel::find($keys[1]);
+    $imovel3 = App\Imovel::find($keys[2]);
+    $imoveis = collect([$imovel1,$imovel2,$imovel3]);
+
     $fotos = Foto::where('imovel_id', '=', '1')->get();
-    return view('pages.home', ['title' => 'Imobiliaria J.Lima - Principal', 'imoveis' => $imoveis, 'fotos' => $fotos]);
+
+
+    $imoveis = $imoveis->values();
+    
+    $caracteristicas0 = $imoveis[0]->caracteristicas;
+    return view('pages.home', ['title' => 'Imobiliaria J.Lima - Principal',
+     'imoveis' => $imoveis,
+     'fotos' => $fotos,
+     'caracteristicas' => $caracteristicas0,
+     'keys' => $keys,
+      ]);
 });
 Route::get('/about', function()
 {

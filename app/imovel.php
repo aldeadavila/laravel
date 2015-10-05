@@ -19,7 +19,7 @@ class Imovel extends Model
 
   public function caracteristicas()
   {
-    return $this->belongsToMany('Caracteristica', 'imovels_caracteristicas', 'imovel_id', 'caracteristica_id');
+    return $this->belongsToMany('App\caracteristica', 'imovels_caracteristicas', 'imovel_id', 'caracteristica_id');
   }
 
 }
