@@ -8,7 +8,7 @@ class Foto extends Model
 {
    protected $table = 'fotos';
 
-   protected $fillable = ['ruta', 'nome', 'descricao', 'imovel_id'];
+   protected $fillable = ['ruta', 'nome', 'descricao'];
 
     public function imovel()
     {

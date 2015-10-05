@@ -15,23 +15,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="row">
-                                <div class="col-md-6">
-                                <img src="<?php echo $fotos[0]->ruta ?>" class="img-thumbnail">
-                                </div>
-                                <div class="col-md-6 description">
-                                    <p>hola</p>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-                <div class="carousel-caption">
-                    <h2>{{ $imoveis[0]->negocio . " " . $imoveis[0]->tipo_de_imovel . " " . $imoveis[0]->cidade }}</h2>
-                </div>
+                @include('includes.slide')
             </div>
             <div class="item">
                 <div class="fill"></div>

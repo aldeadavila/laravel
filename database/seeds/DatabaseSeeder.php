@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(ImovelTableSeeder::class);
         $this->call(FotoTableSeeder::class);
+        $this->call(CaracteristicaTableSeeder::class);
+        $this->call(ImovelsCaracteristicasSeeder::class);
+
 
         Model::reguard();
     }
