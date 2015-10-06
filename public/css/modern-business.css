@@ -48,6 +48,19 @@ header.carousel .fill .description {
     padding-left: 30px;
 }
 
+header.carousel .fill ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+header.carousel .fill li {
+ padding-left: 10px:;
+}
+
 /* 404 Page Styles */
 
 .error-404 {

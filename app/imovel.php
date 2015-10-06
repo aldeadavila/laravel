@@ -9,12 +9,12 @@ class Imovel extends Model
 
   public function fotos()
   {
-    return $this->hasMany('foto');
+    return $this->hasMany('App\foto');
   }
 
   public function user()
   {
-    return $this->belongsTo('User');
+    return $this->belongsTo('App\User');
   }
 
   public function caracteristicas()

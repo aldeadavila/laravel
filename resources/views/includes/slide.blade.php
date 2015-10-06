@@ -11,13 +11,15 @@
                     <div class="row">
                         {{ $imoveis[$numeroImovel]->descricao }}
                     </div>
+                    <hr>
                     <div class="row">
                         <?php $carac =  $imoveis[$numeroImovel]->caracteristicas ?>
-                        @foreach ($carac as $cara)
                         <ul>
-                            <li>{{ $cara->name }}</li>
-                        </ul>
+                        @foreach ($carac as $cara)
+                            
+                            <li class="fa fa-check-circle-o">{{ " " . $cara->name }}</li>
                         @endforeach
+                        </ul>
                     </div>
                 </div>
             </div>
