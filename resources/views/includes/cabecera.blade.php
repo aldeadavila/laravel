@@ -15,6 +15,11 @@
             </ul>
          </div>
       </div>
-     <div class="col-sm-3">.col-sm-3</div>
+      <div class="col-sm-3 .social">
+        <br>
+        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+      </div>
    </div>
 </div>

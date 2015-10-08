@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-inverse {
-    background-color: #303580;
+    background-color: #337AB7;
     border-color: #E4A02E;
 }
 
@@ -88,4 +88,10 @@ body {
     text-align: center;
     top:-20px;
     width: 100%;
+  }
+
+  .social {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
   }
