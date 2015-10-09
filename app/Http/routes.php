@@ -55,6 +55,34 @@ Route::get('/contact', function()
     return View::make('pages.contact');
 });
 
+//Ruta para pruebas de la BD
+
+Route::get('/db', function() {
+
+    $prueba = DB::table('imovels')->where('id', '=', '8')->first();
+    $negocios = DB::table('imovels')->distinct()->lists('negocio');
+    $conFotos = DB::table('imovels')
+        ->leftJoin('fotos', 'imovels.id', '=', 'fotos.imovel_id')
+        ->where('fotos.imovel_id', '=', '5')
+        ->select('fotos.nome', 'fotos.ruta')
+        ->get();
+    
+    /* DB::table('users')
+            ->join('contacts', 'users.id', '=', 'contacts.user_id')
+            ->join('orders', 'users.id', '=', 'orders.user_id')
+            ->select('users.id', 'contacts.phone', 'orders.price')
+            ->get();*/
+
+
+    return View::make('pages.prueba', [
+        'conFotos' => $conFotos,
+        'prueba' => $prueba,
+        'negocios' => $negocios,
+        ]);
+    
+});
+
+
 // Authentication routes...
 Route::get('auth/login', ['as' =>'login', 'uses' => 'Auth\AuthController@getLogin']);
 Route::post('auth/login', ['as' =>'login', 'uses' => 'Auth\AuthController@postLogin']);
